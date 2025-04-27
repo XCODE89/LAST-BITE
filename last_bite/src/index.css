@@ -1,0 +1,95 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 330 23% 7%;
+    --foreground: 210 40% 98%;
+
+    --card: 329 20% 5%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 330 23% 7%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 339 64% 56%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 329 20% 15%;
+    --muted-foreground: 215.4 16.3% 76.9%;
+
+    --accent: 45 75% 52%;
+    --accent-foreground: 330 23% 7%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 329 20% 20%;
+    --input: 329 20% 20%;
+    --ring: 339 64% 56%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-lastbite-black text-foreground font-inter;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+  
+  a {
+    @apply transition-colors duration-300;
+  }
+  
+  .container {
+    @apply mx-auto px-4 md:px-6 lg:px-8;
+    max-width: 1440px;
+  }
+  
+  .section {
+    @apply py-12 md:py-24;
+  }
+  
+  .hero-gradient {
+    background: linear-gradient(135deg, rgba(26, 10, 18, 0.95) 0%, rgba(88, 60, 60, 0.2) 100%);
+  }
+  
+  .card-hover {
+    @apply transition duration-500 ease-in-out;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gold-gradient {
+    background: linear-gradient(90deg, #D4AF37 0%, #F2D380 50%, #D4AF37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}

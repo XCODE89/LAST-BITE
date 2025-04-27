@@ -1,0 +1,98 @@
+export  const productsData = [
+    { 
+    id: 1, 
+    name: "Auriculares Premium", 
+    category: "audio", 
+    price: 249.99, 
+    rating: 4.8, 
+    image: "https://static.vecteezy.com/system/resources/previews/044/279/881/non_2x/chocolate-chips-on-cookie-on-transparent-background-png.png", 
+    tags: ["wireless", "noise-cancelling"],
+    colors: ["#000000", "#FFFFFF", "#C0C0C0"],
+    isNew: true,
+    isBestseller: true
+    },
+    { 
+    id: 2, 
+    name: "Smartwatch Elegance", 
+    category: "wearables", 
+    price: 199.99, 
+    rating: 4.6, 
+    image: "https://static.vecteezy.com/system/resources/previews/044/279/881/non_2x/chocolate-chips-on-cookie-on-transparent-background-png.png", 
+    tags: ["fitness", "water-resistant"],
+    colors: ["#000000", "#FFD700", "#C0C0C0"],
+    isNew: true,
+    isBestseller: false
+    },
+    { 
+    id: 3, 
+    name: "Cámara Profesional", 
+    category: "photography", 
+    price: 899.99, 
+    rating: 4.9, 
+    image: "https://static.vecteezy.com/system/resources/previews/044/279/881/non_2x/chocolate-chips-on-cookie-on-transparent-background-png.png", 
+    tags: ["4K", "night-vision"],
+    colors: ["#000000"],
+    isNew: false,
+    isBestseller: true
+    },
+    { 
+    id: 4, 
+    name: "Altavoz Inteligente", 
+    category: "audio", 
+    price: 129.99, 
+    rating: 4.5, 
+    image: "https://static.vecteezy.com/system/resources/previews/044/279/881/non_2x/chocolate-chips-on-cookie-on-transparent-background-png.png", 
+    tags: ["voice-control", "wifi"],
+    colors: ["#000000", "#FFFFFF", "#87CEEB"],
+    isNew: false,
+    isBestseller: false 
+    },
+    { 
+    id: 5, 
+    name: "Laptop UltraSlim", 
+    category: "computers", 
+    price: 1299.99, 
+    rating: 4.7, 
+    image: "https://static.vecteezy.com/system/resources/previews/044/279/881/non_2x/chocolate-chips-on-cookie-on-transparent-background-png.png", 
+    tags: ["touchscreen", "lightweight"],
+    colors: ["#C0C0C0", "#000000"],
+    isNew: true,
+    isBestseller: true
+    },
+    { 
+    id: 6, 
+    name: "Tablet Creativa", 
+    category: "computers", 
+    price: 499.99, 
+    rating: 4.4, 
+    image: "https://static.vecteezy.com/system/resources/previews/044/279/881/non_2x/chocolate-chips-on-cookie-on-transparent-background-png.png", 
+    tags: ["stylus", "retina-display"],
+    colors: ["#000000", "#FFFFFF", "#C0C0C0"],
+    isNew: false,
+    isBestseller: true
+    },
+    { 
+    id: 7, 
+    name: "Drone Explorer", 
+    category: "photography", 
+    price: 799.99, 
+    rating: 4.6, 
+    image: "https://static.vecteezy.com/system/resources/previews/044/279/881/non_2x/chocolate-chips-on-cookie-on-transparent-background-png.png", 
+    tags: ["4K", "foldable"],
+    colors: ["#FFFFFF"],
+    isNew: true,
+    isBestseller: false
+    },
+    { 
+    id: 8, 
+    name: "Pulsera Fitness", 
+    category: "wearables", 
+    price: 79.99, 
+    rating: 4.3, 
+    image: "https://static.vecteezy.com/system/resources/previews/044/279/881/non_2x/chocolate-chips-on-cookie-on-transparent-background-png.png", 
+    tags: ["heart-rate", "waterproof"],
+    colors: ["#000000", "#FF0000", "#0000FF", "#008000"],
+    isNew: false,
+    isBestseller: false
+    },
+];
