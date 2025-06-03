@@ -49,7 +49,7 @@
   }
   
   body {
-    @apply bg-lastbite-black text-foreground font-inter;
+    @apply bg-lastbite-crema text-foreground font-inter;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -72,10 +72,6 @@
     @apply py-12 md:py-24;
   }
   
-  .hero-gradient {
-    background: linear-gradient(135deg, rgba(26, 10, 18, 0.95) 0%, rgba(88, 60, 60, 0.2) 100%);
-  }
-  
   .card-hover {
     @apply transition duration-500 ease-in-out;
   }
@@ -92,4 +88,16 @@
     background-clip: text;
     text-fill-color: transparent;
   }
+}
+
+
+.colorsPallet {
+  color: #103D4A	;
+  color: #eabcf3	;
+  color: #F5F3EE		;
+  color: #A8B9A3	;
+  color: #1B1B1B	;
+  color: #F2B8A2	;
+  color: #FFC700	;
+  color: #D4AF37	;
 }

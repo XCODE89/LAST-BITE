@@ -3,6 +3,7 @@ import foto_prueba from "../assets/postre_prueba.png"
 export const offers = [
     {
     id: 1,
+    titleTag: "Perzonalizacion1",
     title: "Oferta Especial",
     tagline: "50% de descuento",
     description: "Aprovecha esta oferta por tiempo limitado en nuestros productos más vendidos.",
@@ -12,6 +13,7 @@ export const offers = [
     },
     {
     id: 2,
+    titleTag: "Perzonalizacion2",
     title: "Nueva Colección",
     tagline: "Descubre lo último",
     description: "Explora nuestra nueva colección de productos innovadores con diseños exclusivos.",
@@ -21,6 +23,7 @@ export const offers = [
     },
     {
     id: 3,
+    titleTag: "Perzonalizacion3",
     title: "Pack Promocional",
     tagline: "Compra 2 y lleva 3",
     description: "Llévate tres productos por el precio de dos en toda nuestra línea exclusiva.",

@@ -5,8 +5,8 @@ import { Footer } from '../../../common/components/Footer';
 import { Navbar } from '../../../common/components/NavBar';
 import HeroCatering from '../components/HeroCatering';
 import ServicesCatering from '../components/ServicesCatering';
-import { containerVariants, itemVariants } from '../constants/animationVariants';
 import PackagesCatering from '../components/PackagesCatering';
+import { containerVariants, itemVariants } from '../../../common/constants/animationVariants';
 
 const Catering = () => {
 const [formData, setFormData] = useState({

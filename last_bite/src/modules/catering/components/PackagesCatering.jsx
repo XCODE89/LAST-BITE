@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { containerVariants, itemVariants } from '../constants/animationVariants'
 import { cateringPackages } from '../../../api/cateringPackages';
+import { containerVariants, itemVariants } from '../../../common/constants/animationVariants';
 
 const PackagesCatering = () => {
   return (

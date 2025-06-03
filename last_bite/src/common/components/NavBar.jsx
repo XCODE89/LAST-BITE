@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Cart } from '../../modules/cart/Cart';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -29,8 +30,8 @@ const Navbar = () => {
 
   return (
     <motion.header
-    className={`sticky top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-lastbite-black/90 backdrop-blur-md py-3' : 'bg-lastbite-black/70 py-5'
+    className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? 'bg-lastbite-verde/90 py-3' : 'bg-lastbite-azul/70 py-5'
     }`}
     initial="initial"
     animate="animate"
@@ -74,30 +75,23 @@ const Navbar = () => {
         ))}
         </nav>
 
-        <a href="#home" className="flex justify-center py-2">
+        <Link to="/" className="flex justify-center py-2">
             <h2 className="text-3xl sm:text-4xl font-serif tracking-wider m-0">
-                <span className='bg-white text-black px-2 py-1/2'>LAST</span>
-                <span className='bg-black text-white px-2'>BITE</span>
+                <span className='bg-lastbite-crema text-lastbite-negSuave px-2 py-1/2'>LAST</span>
+                <span className='bg-lastbite-negSuave text-lastbite-crema px-2'>BITE</span>
             </h2>
-        </a>
+        </Link>
 
         {/* // TODO: carrito de compras */}
         <div className='flex justify-end'>
-            <button 
-                onClick={() => setMenuOpen(!menuOpen)}
-                className="text-white focus:outline-none"
-            >
-                <div className={`w-6 h-0.5 bg-white mb-1.5 transition-all ${menuOpen ? 'transform rotate-45 translate-y-2' : ''}`}></div>
-                <div className={`w-6 h-0.5 bg-white mb-1.5 transition-all ${menuOpen ? 'opacity-0' : ''}`}></div>
-                <div className={`w-6 h-0.5 bg-white transition-all ${menuOpen ? 'transform -rotate-45 -translate-y-2' : ''}`}></div>
-            </button>
+            <Cart></Cart>
         </div>
     </div>
 
     {/* Mobile Menu */}
     {menuOpen && (
         <motion.div 
-        className="md:hidden bg-lastbite-black/95 backdrop-blur-md absolute w-full py-4"
+        className="md:hidden bg-lastbite-azul/95 backdrop-blur-md absolute w-full py-4"
         initial={{ opacity: 0, height: 0 }}
         animate={{ opacity: 1, height: 'auto' }}
         exit={{ opacity: 0, height: 0 }}

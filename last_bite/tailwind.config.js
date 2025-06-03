@@ -53,9 +53,16 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				lastbite: {
+					azul: '#103D4A',
+					lavanda: '#C4B5C7',
+					crema: '#F5F3EE',
+					verde: '#DBE4D5',
+					negSuave: '#1B1B1B',
+					durazno: '#F2B8A2',
 					black: '#1A0A12',
-					pink: '#D24C85',
+					pink: '#FDD3DB',
 					gold: '#D4AF37',
+					goldVib: '#FFC700',
 				}
 			},
 			borderRadius: {

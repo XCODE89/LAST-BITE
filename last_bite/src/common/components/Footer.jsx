@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-lastbite-black py-16 border-t border-lastbite-pink/20">
+    <footer className="bg-lastbite-verde py-16 border-t border-lastbite-pink/20">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="md:col-span-1">
@@ -18,13 +18,13 @@ const Footer = () => {
             >
               Last<span className="gold-gradient">Bite</span>
             </motion.h2>
-            <p className="text-gray-300 mb-6">
+            <p className="text-lastbite-negSuave mb-6">
               Exquisitos postres gourmet que transforman momentos ordinarios en experiencias extraordinarias.
             </p>
             <div className="flex space-x-4">
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-lastbite-pink/20 flex items-center justify-center hover:bg-lastbite-pink text-white transition-colors"
+                className="w-10 h-10 rounded-full bg-lastbite-crema flex items-center justify-center hover:bg-lastbite-gold text-lastbite-azul transition-colors"
                 aria-label="Instagram"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -33,7 +33,7 @@ const Footer = () => {
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-lastbite-pink/20 flex items-center justify-center hover:bg-lastbite-pink text-white transition-colors"
+                className="w-10 h-10 rounded-full bg-lastbite-crema flex items-center justify-center hover:bg-lastbite-gold text-lastbite-azul transition-colors"
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +42,7 @@ const Footer = () => {
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-lastbite-pink/20 flex items-center justify-center hover:bg-lastbite-pink text-white transition-colors"
+                className="w-10 h-10 rounded-full bg-lastbite-crema flex items-center justify-center hover:bg-lastbite-gold text-lastbite-azul transition-colors"
                 aria-label="Twitter"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +51,7 @@ const Footer = () => {
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-lastbite-pink/20 flex items-center justify-center hover:bg-lastbite-pink text-white transition-colors"
+                className="w-10 h-10 rounded-full bg-lastbite-crema flex items-center justify-center hover:bg-lastbite-gold text-lastbite-azul transition-colors"
                 aria-label="Pinterest"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -61,62 +61,62 @@ const Footer = () => {
             </div>
           </div>
           
-          <div className="md:col-span-1">
-            <h3 className="text-white font-playfair font-semibold mb-6">Enlaces Rápidos</h3>
+          <div className="md:col-span-1 text-lastbite-negSuave">
+            <h3 className="text-lastbite-azul font-playfair font-semibold mb-6">Enlaces Rápidos</h3>
             <ul className="space-y-4">
               <li>
-                <a href="#home" className="text-gray-300 hover:text-lastbite-pink transition-colors">Inicio</a>
+                <a href="#home" className="hover:text-lastbite-gold transition-colors">Inicio</a>
               </li>
               <li>
-                <a href="#products" className="text-gray-300 hover:text-lastbite-pink transition-colors">Productos</a>
+                <a href="#products" className="hover:text-lastbite-gold transition-colors">Productos</a>
               </li>
               <li>
-                <a href="#gallery" className="text-gray-300 hover:text-lastbite-pink transition-colors">Galería</a>
+                <a href="#gallery" className="hover:text-lastbite-gold transition-colors">Galería</a>
               </li>
               <li>
-                <a href="#about" className="text-gray-300 hover:text-lastbite-pink transition-colors">Sobre Nosotros</a>
+                <a href="#about" className="hover:text-lastbite-gold transition-colors">Sobre Nosotros</a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-300 hover:text-lastbite-pink transition-colors">Contacto</a>
+                <a href="#contact" className="hover:text-lastbite-gold transition-colors">Contacto</a>
               </li>
             </ul>
           </div>
           
-          <div className="md:col-span-1">
-            <h3 className="text-white font-playfair font-semibold mb-6">Productos</h3>
+          <div className="md:col-span-1 text-lastbite-negSuave">
+            <h3 className="text-lastbite-azul font-playfair font-semibold mb-6">Productos</h3>
             <ul className="space-y-4">
               <li>
-                <a href="#" className="text-gray-300 hover:text-lastbite-pink transition-colors">Macarons</a>
+                <a href="#" className="hover:text-lastbite-gold transition-colors">Macarons</a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-lastbite-pink transition-colors">Pasteles</a>
+                <a href="#" className="hover:text-lastbite-gold transition-colors">Pasteles</a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-lastbite-pink transition-colors">Tartas</a>
+                <a href="#" className="hover:text-lastbite-gold transition-colors">Tartas</a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-lastbite-pink transition-colors">Chocolates</a>
+                <a href="#" className="hover:text-lastbite-gold transition-colors">Chocolates</a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-lastbite-pink transition-colors">Colecciones</a>
+                <a href="#" className="hover:text-lastbite-gold transition-colors">Colecciones</a>
               </li>
             </ul>
           </div>
           
-          <div className="md:col-span-1">
-            <h3 className="text-white font-playfair font-semibold mb-6">Boletín</h3>
-            <p className="text-gray-300 mb-4">
+          <div className="md:col-span-1 text-lastbite-negSuave">
+            <h3 className="text-lastbite-azul font-playfair font-semibold mb-6">Boletín</h3>
+            <p className="mb-4">
               Suscríbete para recibir noticias, ofertas exclusivas y más.
             </p>
             <form className="flex">
               <input
                 type="email"
                 placeholder="Tu correo electrónico"
-                className="flex-grow px-4 py-2 bg-black/30 border border-lastbite-pink/30 rounded-l-md focus:outline-none text-white"
+                className="w-full flex-grow px-2 py-2 bg-lastbite-crema border border-lastbite-pink/30 rounded-l-md focus:outline-none text-lastbite-negSuave"
               />
               <button
                 type="submit"
-                className="bg-lastbite-pink px-4 py-2 rounded-r-md text-white hover:bg-opacity-90 transition"
+                className="bg-lastbite-azul px-4 py-2 rounded-r-md text-white hover:bg-opacity-90 transition"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -127,7 +127,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-12 pt-8 border-t border-lastbite-pink/10 text-center">
-          <p className="text-gray-400">
+          <p className="text-lastbite-negSuave/50">
             &copy; {currentYear} Last Bite. Todos los derechos reservados. Diseñado con pasión.
           </p>
         </div>

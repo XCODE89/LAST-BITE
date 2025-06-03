@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion';
 import { offers } from '../../../api/offers';
-import CATButton from '../../../common/components/CATButton';
-import { contentVariants, slideVariants } from '../../../common/constants/animationVariants';
+import { contentVariants, slideVariants } from '../contansts/animationVariants';
 
 const Hero = () => {
 
@@ -34,35 +33,21 @@ const [currentIndex, setCurrentIndex] = useState(0);
   const currentOffer = offers[currentIndex];
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
-      {/* Imagen de fondo con transición suave */}
-      <AnimatePresence initial={false}>
-        <motion.div
-          key={currentOffer.id}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.8 }}
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('${currentOffer.bgImage}')`,
-          }}
-        />
-      </AnimatePresence>
-      
+    <div className="h-screen w-full flex">
+
       {/* Contenedor principal */}
-      <div className="relative h-full w-full flex items-center text-lastbite-negSuave">
+      <div className="h-full w-1/2 flex items-center overflow-hidden bg-lastbite-durazno">
         <div className="container mx-auto px-6">
           <AnimatePresence initial={false} custom={direction} mode="wait">
             <motion.div
               key={currentOffer.id}
               custom={direction}
               variants={slideVariants}
-              initial="center"
+              initial="enter"
               animate="center"
               exit="exit"
               transition={{ duration: 0.5, type: "tween" }}
-              className="max-w-md"
+              className="max-w-md text-white"
             >
               {/* Indicador de oferta */}
               <motion.div 
@@ -72,9 +57,8 @@ const [currentIndex, setCurrentIndex] = useState(0);
                 animate="visible"
                 custom={0}
               >
-                <span className=" text-lastbite-pink text-sm font-bold px-3 border-b border-t py-1 ">
-                  {/* //!se puede poner el nombre de la coleccion */}
-                  {offers[currentIndex].titleTag}
+                <span className="bg-red-600 text-white text-sm font-bold px-3 py-1 rounded-md">
+                  Oferta {currentIndex + 1} de {offers.length}
                 </span>
               </motion.div>
               
@@ -126,20 +110,24 @@ const [currentIndex, setCurrentIndex] = useState(0);
                     animate="visible"
                     custom={4 + index * 0.3}
                   >
-                    <div className="w-2 h-2 rounded-full bg-lastbite-gold mr-2"></div>
+                    <div className="w-2 h-2 rounded-full bg-green-400 mr-2"></div>
                     <p>{feature}</p>
                   </motion.div>
                 ))}
               </motion.div>
               
               {/* Botón CTA */}
-              <CATButton 
-                color="bg-lastbite-gold" 
-                hover="hover:bg-blue-700" 
-                contentVariants={contentVariants} 
-                content={currentOffer.ctaText}
-                text="text-lastbit-negSuave"/>
-
+              <motion.button 
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300"
+                variants={contentVariants}
+                initial="hidden"
+                animate="visible"
+                custom={5}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {currentOffer.ctaText}
+              </motion.button>
             </motion.div>
           </AnimatePresence>
 
@@ -185,6 +173,24 @@ const [currentIndex, setCurrentIndex] = useState(0);
             </motion.button>
           </div>
         </div>
+      </div>
+
+      {/* Imagen de fondo con transición suave */}
+      <div className="w-1/2 h-full relative overflow-hidden">
+        <AnimatePresence initial={false}>
+          <motion.div
+            key={currentOffer.id}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8 }}
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url('${currentOffer.bgImage}')`,
+              filter: 'brightness(0.7)',
+            }}
+          />
+        </AnimatePresence>
       </div>
     </div>
   );
