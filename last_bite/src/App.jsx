@@ -5,6 +5,7 @@ import { NotFound } from "./common/pages/NotFound";
 import { Products } from "./modules/products/pages/Products";
 import { Catering } from "./modules/catering/pages/Catering";
 import { ProductDetail } from "./modules/detail/pages/ProductDetail";
+import PaymentPage from "./modules/payment/pages/PaymentPage";
 
 const App = () => (
       <BrowserRouter>
@@ -13,6 +14,7 @@ const App = () => (
           <Route path="/productos" element={<Products />} />
           <Route path="/productos/:id" element={<ProductDetail />} />
           <Route path="/catering" element={<Catering />} />
+          <Route path="/payment" element={<PaymentPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

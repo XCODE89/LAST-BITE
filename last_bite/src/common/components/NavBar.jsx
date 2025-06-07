@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Cart } from '../../modules/cart/Cart';
+import { linkVariants, spanVariants } from '../constants/animationVariants';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -31,7 +32,7 @@ const Navbar = () => {
   return (
     <motion.header
     className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-lastbite-verde/90 py-3' : 'bg-lastbite-azul/70 py-5'
+        scrolled ? 'bg-lastbite-primaryCl py-3' : 'bg-lastbite-primaryCl py-5'
     }`}
     initial="initial"
     animate="animate"
@@ -42,11 +43,11 @@ const Navbar = () => {
         <div className="md:hidden">
             <button 
                 onClick={() => setMenuOpen(!menuOpen)}
-                className="text-white focus:outline-none"
+                className="text-lastbite-accent focus:outline-none"
             >
-                <div className={`w-6 h-0.5 bg-white mb-1.5 transition-all ${menuOpen ? 'transform rotate-45 translate-y-2' : ''}`}></div>
-                <div className={`w-6 h-0.5 bg-white mb-1.5 transition-all ${menuOpen ? 'opacity-0' : ''}`}></div>
-                <div className={`w-6 h-0.5 bg-white transition-all ${menuOpen ? 'transform -rotate-45 -translate-y-2' : ''}`}></div>
+                <div className={`w-6 h-0.5 bg-lastbite-neutroOs mb-1.5 transition-all ${menuOpen ? 'transform rotate-45 translate-y-2' : ''}`}></div>
+                <div className={`w-6 h-0.5 bg-lastbite-neutroOs mb-1.5 transition-all ${menuOpen ? 'opacity-0' : ''}`}></div>
+                <div className={`w-6 h-0.5 bg-lastbite-neutroOs transition-all ${menuOpen ? 'transform -rotate-45 -translate-y-2' : ''}`}></div>
             </button>
         </div>
 
@@ -55,20 +56,20 @@ const Navbar = () => {
         {navLinks.map((link) => (
             <motion.div
             key={link.name}
-            className="text-white hover:text-lastbite-pink text-sm font-medium relative mx-2"
-            whileHover={{ y: -2 }}
+            className="text-lastbite-neutroOs hover:text-lastbite-accent text-base lg:text-lg lg:mx-4 font-medium relative mx-2 lg_mx-4"
+            variants={linkVariants}
+            initial="initial"
+            whileHover="hover"
             transition={{ type: 'spring', stiffness: 400 }}
             >
                 <Link
                     to={link.href}
-                    className="text-white hover:text-lastbite-pink text-sm font-medium relative"
                 >
                     {link.name}
                 </Link>
                 <motion.span
-                    className="absolute bottom-0 left-0 w-full h-0.5 bg-lastbite-pink"
-                    initial={{ scaleX: 0 }}
-                    whileHover={{ scaleX: 1 }}
+                    className="absolute bottom-0 left-0 w-full h-0.5 bg-lastbite-accent/30 origin-left"
+                    variants={spanVariants}
                     transition={{ duration: 0.3 }}
                 />
             </motion.div>
@@ -91,7 +92,7 @@ const Navbar = () => {
     {/* Mobile Menu */}
     {menuOpen && (
         <motion.div 
-        className="md:hidden bg-lastbite-azul/95 backdrop-blur-md absolute w-full py-4"
+        className="md:hidden shadow-md bg-lastbite-primaryCl/60 backdrop-blur-md absolute w-full py-4 text-xl"
         initial={{ opacity: 0, height: 0 }}
         animate={{ opacity: 1, height: 'auto' }}
         exit={{ opacity: 0, height: 0 }}
@@ -101,7 +102,7 @@ const Navbar = () => {
                 <Link
                 key={link.name}
                 to={link.href}
-                className="text-white hover:text-lastbite-pink py-2 block"
+                className="text-lastbite-neutroOs hover:text-lastbite-accent py-4 block"
                 onClick={() => setMenuOpen(false)}
             >
                 {link.name}

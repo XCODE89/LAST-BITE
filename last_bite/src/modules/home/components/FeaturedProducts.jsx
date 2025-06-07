@@ -10,7 +10,7 @@ export const FeaturedProducts = () => {
     const isInView = useInView(ref, { once: false, amount: 0.2 });
 
   return (
-    <section id="products" className="section py-12 bg-lastbite-verde" ref={ref}>
+    <section id="products" className="section py-12 bg-lastbite-neutroCl" ref={ref}>
         <div className="container mx-auto px-0">
             
             <motion.div 
@@ -19,8 +19,8 @@ export const FeaturedProducts = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.7 }}
                 >
-                <h2 className="text-3xl md:text-5xl font-bold mb-6 text-red font-playfair">
-                    Nuestros <span className="text-lastbite-pink">Productos Destacados</span>
+                <h2 className="text-3xl md:text-5xl font-bold mb-6 text-red font-playfair text-lastbite-neutroOs">
+                    Nuestros <span className="text-lastbite-accent">Productos Destacados</span>
                 </h2>
                 <p className="text-lastbite-negSuave max-w-2xl mx-auto">
                     Descubre nuestra selección de postres gourmet, donde la tradición francesa se encuentra con la innovación culinaria para crear experiencias únicas para tu paladar.
@@ -48,10 +48,8 @@ export const FeaturedProducts = () => {
 
         <div className="mt-10 text-center">
             <CATButton
-                color="bg-lastbite-pink"
-                hover="hover:bg-lastbite-crema"
                 content="Ver todos los productos"
-                text="text-lastbite-azul"
+                className="bg-lastbite-accent hover:bg-lastbite-accent/90 text-lastbite-neutroCl"
             />
         </div>
         </div>

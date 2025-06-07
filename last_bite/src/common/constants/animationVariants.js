@@ -32,11 +32,21 @@ export const slideVariants = {
     })
   };
   
-  export const contentVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: (custom) => ({
-      opacity: 1,
-      y: 0,
-      transition: { delay: custom * 0.2 }
-    })
-  };
+export const contentVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (custom) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: custom * 0.2 }
+  })
+};
+
+export const linkVariants = {
+  initial: { y: 0 },
+  hover: { y: -2 },
+};
+
+export const spanVariants = {
+  initial: { scaleX: 0 },
+  hover: { scaleX: 1 },
+};

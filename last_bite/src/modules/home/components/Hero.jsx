@@ -25,7 +25,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
       nextOffer();
-    }, 5000); // Cambia cada 5 segundos
+    }, 10000); // Cambia cada 5 segundos
 
     return () => clearInterval(interval);
   }, []);
@@ -51,8 +51,8 @@ const [currentIndex, setCurrentIndex] = useState(0);
       </AnimatePresence>
       
       {/* Contenedor principal */}
-      <div className="relative h-full w-full flex items-center text-lastbite-negSuave">
-        <div className="container mx-auto px-6">
+      <div className="relative h-full w-full flex items-center">
+        <div className="container mx-auto px-6 text-lastbite-neutroOs">
           <AnimatePresence initial={false} custom={direction} mode="wait">
             <motion.div
               key={currentOffer.id}
@@ -62,7 +62,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
               animate="center"
               exit="exit"
               transition={{ duration: 0.5, type: "tween" }}
-              className="max-w-md"
+              className="max-w-md flex flex-col gap-4"
             >
               {/* Indicador de oferta */}
               <motion.div 
@@ -72,7 +72,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
                 animate="visible"
                 custom={0}
               >
-                <span className=" text-lastbite-pink text-sm font-bold px-3 border-b border-t py-1 ">
+                <span className=" text-sm font-bold px-3 border-b border-t py-1 ">
                   {/* //!se puede poner el nombre de la coleccion */}
                   {offers[currentIndex].titleTag}
                 </span>
@@ -80,7 +80,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
               
               {/* Información del producto - Animación escalonada */}
               <motion.h1 
-                className="text-4xl font-bold mb-4"
+                className="text-4xl font-bold mb-4 uppercase"
                 variants={contentVariants}
                 initial="hidden"
                 animate="visible"
@@ -99,46 +99,13 @@ const [currentIndex, setCurrentIndex] = useState(0);
                 {currentOffer.tagline}
               </motion.h2>
               
-              <motion.p 
-                className="mb-6"
-                variants={contentVariants}
-                initial="hidden"
-                animate="visible"
-                custom={3}
-              >
-                {currentOffer.description}
-              </motion.p>
-              
-              {/* Características principales */}
-              <motion.div 
-                className="mb-8"
-                variants={contentVariants}
-                initial="hidden"
-                animate="visible"
-                custom={4}
-              >
-                {currentOffer.features.map((feature, index) => (
-                  <motion.div 
-                    key={index} 
-                    className="flex items-center mb-2"
-                    variants={contentVariants}
-                    initial="hidden"
-                    animate="visible"
-                    custom={4 + index * 0.3}
-                  >
-                    <div className="w-2 h-2 rounded-full bg-lastbite-gold mr-2"></div>
-                    <p>{feature}</p>
-                  </motion.div>
-                ))}
-              </motion.div>
-              
               {/* Botón CTA */}
               <CATButton 
-                color="bg-lastbite-gold" 
-                hover="hover:bg-blue-700" 
                 contentVariants={contentVariants} 
                 content={currentOffer.ctaText}
-                text="text-lastbit-negSuave"/>
+                className="bg-lastbite-accent hover:bg-lastbite-accent/90 text-lastbite-neutroCl w-2/3"
+              />
+                
 
             </motion.div>
           </AnimatePresence>
@@ -147,7 +114,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
           <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-4">
             <motion.button 
               onClick={prevOffer}
-              className="p-2 bg-gray-800 bg-opacity-60 rounded-full hover:bg-opacity-80"
+              className="p-2 bg-lastbite-neutroOs bg-opacity-60 rounded-full hover:bg-opacity-80"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               aria-label="Oferta anterior"
@@ -157,7 +124,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
               </svg>
             </motion.button>
             
-            <div className="flex space-x-2">
+            <div className="flex space-x-2 items-center">
               {offers.map((_, idx) => (
                 <motion.button 
                   key={idx}
@@ -165,7 +132,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
                     setDirection(idx > currentIndex ? 1 : -1);
                     setCurrentIndex(idx);
                   }}
-                  className={`w-3 h-3 rounded-full ${currentIndex === idx ? 'bg-white' : 'bg-gray-400'}`}
+                  className={`w-3 h-3 rounded-full ${currentIndex === idx ? 'bg-lastbite-neutroCl' : 'bg-lastbite-neutroOs/70'}`}
                   whileHover={{ scale: 1.2 }}
                   aria-label={`Ir a oferta ${idx + 1}`}
                 ></motion.button>
@@ -174,7 +141,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
             
             <motion.button 
               onClick={nextOffer}
-              className="p-2 bg-gray-800 bg-opacity-60 rounded-full hover:bg-opacity-80"
+              className="p-2 bg-lastbite-neutroOs bg-opacity-60 rounded-full hover:bg-opacity-80"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               aria-label="Siguiente oferta"

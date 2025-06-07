@@ -62,7 +62,13 @@ export default {
 					black: '#1A0A12',
 					pink: '#FDD3DB',
 					gold: '#D4AF37',
-					goldVib: '#FFC700',
+					goldVib: '#cba418',
+					neutroOs: "#4B2C3F",
+					neutroCl: "#FAF8F6",
+					primaryCl: "#D8B4C6",
+					secondaryCl: "#F6E7D8",
+					accent: "#DF4747",
+					
 				}
 			},
 			borderRadius: {

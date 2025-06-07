@@ -92,12 +92,29 @@
 
 
 .colorsPallet {
+  /* sss */
   color: #103D4A	;
   color: #eabcf3	;
   color: #F5F3EE		;
   color: #A8B9A3	;
   color: #1B1B1B	;
   color: #F2B8A2	;
-  color: #FFC700	;
+  color: #cba418	;
   color: #D4AF37	;
 }
+
+.colorsPallet2 {
+  /* Primario - Soft Mauve - acentos decorativos */
+  color: #D8B4C6	;
+  /* Secundario - Champagne Beige - fondo de tarjetas y bloques */
+  color: #F6E7D8	;
+  /* Neutro oscuro - Charcoal Plum - Textos importantes y titulos */
+  color: #4B2C3F		;
+  /* Neutro claro - Warm Porcelain - Fondo */
+  color: #FAF8F6	;
+  /* Acento moderno - Terracotta Rose - CTA */
+  color: #D96C6C	;
+  /* Negro */
+  color: #1B1B1B	;
+}
+

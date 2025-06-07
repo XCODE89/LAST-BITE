@@ -8,7 +8,7 @@ const About = () => {
   const isInView = useInView(ref, { once: false, amount: 0.1 });
 
   return (
-    <section id="about" className="section py-12 relative overflow-hidden " ref={ref}>
+    <section id="about" className="section py-12 relative overflow-hidden bg-lastbite-neutroCl" ref={ref}>
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
           className="text-center mb-4"
@@ -16,8 +16,8 @@ const About = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-lastbite-azul font-playfair">
-            Nuestra <span className="text-lastbite-pink">Historia</span>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-lastbite-neutroOs font-playfair">
+            Nuestra <span className="text-lastbite-accent">Historia</span>
           </h2>
           <p className="text-lastbite-negSuave max-w-2xl mx-auto">
             Descubre la pasión y dedicación detrás de cada una de nuestras creaciones.
@@ -56,7 +56,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: false, amount: 0.3 }}
           >
-            <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-lastbite-pink">Pasión por la excelencia</h3>
+            <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-6 text-lastbite-neutroOs">Pasión por la excelencia</h3>
             <p className="text-lastbite-negSuave mb-6">
               Last Bite nació en 2015 como un pequeño proyecto artesanal y ha evolucionado hasta convertirse en una marca de referencia en el mundo de la repostería gourmet. Nuestra fundadora, Elena Morales, tras años de formación en las mejores escuelas de pastelería de París, decidió crear una línea de postres que combinara las técnicas tradicionales francesas con sabores innovadores y presentaciones artísticas.
             </p>
@@ -65,7 +65,7 @@ const About = () => {
             </p>
             <motion.a 
               href="#contact"
-              className="inline-flex items-center text-lastbite-azul hover:text-lastbite-gold transition-colors font-medium"
+              className="inline-flex items-center text-lastbite-neutroOs hover:text-lastbite-accent transition-colors font-medium"
               whileHover={{ x: 5 }}
             >
               Conoce más sobre nuestra filosofía

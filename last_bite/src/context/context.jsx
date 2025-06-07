@@ -5,37 +5,59 @@ export const AppContext = createContext({})
 
 const ContextProvider = ({children}) => {
 
+    const [isCartOpen, setIsCartOpen] = useState(false);
     const [cartItems, setCartItems] = useState([]);
 
-    const addToCart = (dessert) => {
+    const addToCart = (dessert, amount=1) => {
         setCartItems(prevItems => {
         const existingItem = prevItems.find(item => item.id === dessert.id);
         
         if (existingItem) {
             return prevItems.map(item => 
-            item.id === dessert.id ? {...item, quantity: item.quantity + 1} : item
+            item.id === dessert.id ? {...item, quantity: item.quantity + amount} : item
             );
         } else {
-            return [...prevItems, {...dessert, quantity: 1}];
+            return [...prevItems, {...dessert, quantity: amount}];
         }
         });
         
         // Mostrar brevemente el carrito si está cerrado
-        // if (!isCartOpen) {
-        // setIsCartOpen(true);
-        // setTimeout(() => {
-        //     setIsCartOpen(false);
-        // }, 2000);
-        // }
+        if (!isCartOpen) {
+        setIsCartOpen(true);
+        setTimeout(() => {
+            setIsCartOpen(false);
+        }, 2000);
+        }
     };
 
-    const [activeCategory, setActiveCategory] = useState("all");
+    // Eliminar producto del carrito
+    const removeFromCart = (id) => {
+        console.log("removiendo ", id)
+        setCartItems(prevItems => 
+        prevItems.filter(item => item.id !== id)
+        );
+    };
+  
+    // Modificar cantidad de un producto
+    const updateQuantity = (id, newQuantity) => {
+        if (newQuantity < 1) {
+        removeFromCart(id);
+        return;
+        }
+        
+        setCartItems(prevItems => 
+        prevItems.map(item => 
+            item.id === id ? {...item, quantity: newQuantity} : item
+        )
+        );
+    };
+
+    const [activeCategory, setActiveCategory] = useState("Todos");
     const [searchQuery, setSearchQuery] = useState("");
     const [filteredProducts, setFilteredProducts] = useState(productsData);
-    const [isGridView, setIsGridView] = useState(true);
 
     return (
-        <AppContext.Provider value={{ cartItems, addToCart, activeCategory, setActiveCategory, searchQuery, setSearchQuery, filteredProducts, setFilteredProducts, isGridView, setIsGridView }}>
+        <AppContext.Provider value={{ isCartOpen, setIsCartOpen, cartItems, setCartItems, addToCart, updateQuantity, removeFromCart, activeCategory, setActiveCategory, searchQuery, setSearchQuery, filteredProducts, setFilteredProducts }}>
             {children}
         </AppContext.Provider>
     )
